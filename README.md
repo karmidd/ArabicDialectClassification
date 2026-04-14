@@ -50,48 +50,21 @@ To handle severe class imbalance, we created strictly balanced subsets (50–100
 
 ```
 ├── COMP432_Final_Report.ipynb   # Full notebook (report + runnable code)
-├── results/
-│   ├── best_lora_1_7B_1000pd_r32.pt    # 1.7B (1.7B CHAMPION)
-│   ├── best_lora_1_7B_500pd_r32.pt  
-│   ├── best_lora_1_7B_200pd_r32.pt      
-│   ├── best_lora_1_7B_100pd_r32.pt   
-│   ├── best_lora_1_7B_50pd_r32.pt
-│   ├── best_lora_1_7B_1000pd_r8.pt  
-│   ├── best_lora_1_7B_500pd_r8.pt   
-│   ├── best_lora_1_7B_200pd_r8.pt   
-│   ├── best_lora_1_7B_100pd_r8.pt   
-│   ├── best_lora_1_7B_50pd_r8.pt   
-│   ├── best_frozen_1_7B_1000pd.pt   
-│   ├── best_frozen_1_7B_500pd.pt  
-│   ├── best_frozen_1_7B_200pd.pt   
-│   ├── best_frozen_1_7B_100pd.pt   
-│   ├── best_frozen_1_7B_50pd.pt   
-│   ├── best_frozen_1000pd.pt  # 0.6B
-│   ├── best_frozen_500pd.pt 
-│   ├── best_frozen_200pd.pt 
-│   ├── best_frozen_100pd.pt  
-│   ├── best_frozen_50pd.pt  
-│   ├── best_lora_1000pd_r32_final.pt   
-│   ├── best_lora_500pd_r32_final.pt   
-│   ├── best_lora_200pd_r32_final.pt  
-│   ├── best_lora_100pd_r32_final.pt 
-│   ├── best_lora_50pd_r32_final.pt 
-│   ├── best_lora_500pd_r32_lr5e5.pt # (0.6B CHAMPION)
-│   ├── best_lora_500pd_r32_lr0.0001.pt  
-│   ├── best_lora_500pd_r32.pt 
-│   ├── best_lora_500pd.pt
-│   ├── best_lora_200pd.pt  
-│   ├── best_lora_100pd.pt
-│   ├── best_lora_50pd.pt  
-│   ├── best_ft_200pd.pt
-│   ├── best_ft_50pd.pt 
-│   └── best_lora_v2_50pd.pt
 ├── visuals/
 │   ├── architecture_diagram.png
 │   ├── tsne_frozen.jpg           # t-SNE before fine-tuning
 │   ├── tsne_embeddings.png       # t-SNE after fine-tuning (r=32)
 │   └── confusion_matrix.png
 └── README.md
+```
+
+### Checkpoints
+
+Trained model checkpoints are available for download in the [Releases](https://github.com/karmidd/ArabicDialectClassification/releases) tab. To reproduce evaluation results without retraining, download the `.pt` file and load it:
+
+```python
+model.load_state_dict(torch.load("best_lora_0_6B_r32.pt"))
+model.eval()
 ```
 
 ## Environment

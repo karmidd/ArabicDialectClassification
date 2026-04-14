@@ -33,7 +33,7 @@ The Qwen3-ASR model is a Large Audio-Language Model built on Qwen3-Omni. We disc
 | MLP Baseline | 7.42 | 7.54 | 7.42 | 11.16 | 14.34 |
 | 0.6B Frozen | 23.13 | 28.23 | 46.39 | 59.58 | 56.98 |
 | 0.6B LoRA r=8 | 19.14 | 38.89 | 74.38 | 52.11 | 47.51 |
-| **0.6B LoRA r=32** | **63.06** | 57.21 | **88.56** | **93.78** | 92.33 |
+| **0.6B LoRA r=32** | 63.06 | 57.21 | 88.56 | **93.78** | 92.33 |
 | 1.7B Frozen | 26.87 | 43.70 | 47.94 | 61.53 | 69.14 |
 | 1.7B LoRA r=8 | 15.46 | 19.51 | 79.24 | 40.59 | 53.43 |
 | **1.7B LoRA r=32** | 28.87 | 61.03 | 71.20 | 89.59 | **93.70** |
@@ -42,7 +42,7 @@ The Qwen3-ASR model is a Large Audio-Language Model built on Qwen3-Omni. We disc
 
 ## Dataset
 
-[ADI-17](https://arxiv.org/abs/2003.06830) — Arabic Dialect Identification dataset covering 17 dialects: ALG, EGY, IRA, JOR, KSA, KUW, LEB, LIB, MAU, MOR, OMA, PAL, QAT, SUD, SYR, UAE, YEM.
+[ADI-17](https://swshon.github.io/pdf/shon_2020_adi17.pdf) — Arabic Dialect Identification dataset covering 17 dialects: ALG, EGY, IRA, JOR, KSA, KUW, LEB, LIB, MAU, MOR, OMA, PAL, QAT, SUD, SYR, UAE, YEM.
 
 To handle severe class imbalance, we created strictly balanced subsets (50–1000 samples per dialect) with a fixed 80/10/10 train/val/test split. For each data scale, the encoder was re-initialized from the original pretrained checkpoint.
 

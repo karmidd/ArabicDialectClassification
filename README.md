@@ -49,7 +49,7 @@ To handle severe class imbalance, we created strictly balanced subsets (50–100
 ## Repository Structure
 
 ```
-├── COMP432_Final_Report.ipynb   # Full notebook (report + runnable code)
+├── Final_Report.ipynb   # Full notebook (report + runnable code)
 ├── visuals/
 │   ├── architecture_diagram.png
 │   ├── tsne_frozen.jpg           # t-SNE before fine-tuning

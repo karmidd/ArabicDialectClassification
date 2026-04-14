@@ -63,7 +63,7 @@ To handle severe class imbalance, we created strictly balanced subsets (50–100
 Trained model checkpoints are available for download in the [Releases](https://github.com/karmidd/ArabicDialectClassification/releases) tab. To reproduce evaluation results without retraining, download the `.pt` file and load it:
 
 ```python
-model.load_state_dict(torch.load("best_lora_0_6B_r32.pt"))
+model.load_state_dict(torch.load("best_lora_0_6B_500pd_r32_lr5e5.pt"))
 model.eval()
 ```
 
